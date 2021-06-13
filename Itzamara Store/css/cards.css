@@ -1,6 +1,6 @@
 /*Variables*/
 :root{
-    --azul: #28527a;
+    --azul: #125d98;
     --rosa: #ff75a0;
     --negro: #000;
     --blanco:#fff;
@@ -110,7 +110,7 @@ h3{
 
   /* Navegación */
   .navegacion-contenido{
-    background-color: #28527a;
+    background-color: var(--azul);
   }
   
    .navegacion{
