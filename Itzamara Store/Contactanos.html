@@ -15,33 +15,45 @@
 
 
 <body>  
-
     <header class="header">
-    <div class="tienda">
-        <div class="logo">
-            <a href="index.html">
-                <img src="img/Logo.png" alt="Logo Itzamara">
-            </a>
-        </div>
+        <div class="tienda">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="img/Logo.png" alt="Logo Itzamara">
+                </a>
+            </div>
 
-        <a href="index.html">ItzamaraStore</a>
+            <a href="index.html">ItzamaraStore</a>
 
-        <div class="cuenta">
-         <a href="#">Mi cuenta</a>
-             <p>
-                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-shopping-cart" width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fd0061" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                     <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                     <circle cx="6" cy="19" r="2" />
-                     <circle cx="17" cy="19" r="2" />
-                     <path d="M17 17h-11v-14h-2" />
-                     <path d="M6 5l14 1l-1 7h-13" />
-                 </svg>
-             </p>
-       </div>
-    </div>
+            <div class="cuenta">
+                <a href="#">Mi cuenta</a>
+        
+                <ul>
+                    <li class="submenu">
+                        <img src="img/cart.png" id="img-carrito">
+                        <div id="carrito">
+                            <table id="lista-carrito" class="u-full-width">
+                                <thead>
+                                    <tr>
+                                        <th>Imagen</th>
+                                        <th>Nombre</th>
+                                        <th>Precio</th>
+                                        <th>Cantidad</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                            
+                            <a href="#" id="vaciar-carrito" class="button u-full-width">Vaciar Carrito</a>
+                            <a href="#" id="comprar" class="button u-full-width">Comprar</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div> <!-- tienda -->
 
-       
-    <div class="navegacion-contenido">
+     <div class="navegacion-contenido">
         
         <div class="contenedor">
              <nav class="navegacion">
@@ -63,9 +75,9 @@
                          <nav>
                              <a href="">Perfil</a>
                              <a href="">Mis compras</a>
-                             <a href="">Sistema</a>
+                             <a href="">Inicio</a>
                              <a href="">Configuracion</a>
-                             <a href="">Otra cosa</a>
+                             <a href="stock.html">Pedido fuera de Stock</a>
                              <a href="">Cerrar sesión</a>
                          </nav>
                          <label for="btn-menu" class="cerrar">
@@ -86,7 +98,7 @@
                  <a href="Contactanos.html">Contactanos</a>
              </nav>
         </div>
-     </div>
+     </div> <!--navegacion-->
     </header>
 
     <main class="contenedor">
@@ -147,12 +159,11 @@
         </div>
 
     </main>
-    
         
         <footer class="footer">
             <p>Itzamara Store</p>  
         </footer>  
-
+        <script src="script.js"></script> 
        
 </body>
 </html>
