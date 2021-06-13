@@ -16,28 +16,42 @@
 <body>  
 
     <header class="header">
-    <div class="tienda">
-        <div class="logo">
-            <a href="index.html">
-                <img src="img/Logo.png" alt="Logo Itzamara">
-            </a>
-        </div>
+        <div class="tienda">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="img/Logo.png" alt="Logo Itzamara">
+                </a>
+            </div>
 
-        <a href="index.html">ItzamaraStore</a>
+            <a href="index.html">ItzamaraStore</a>
 
-        <div class="cuenta">
-         <a href="#">Mi cuenta</a>
-             <p>
-                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-shopping-cart" width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fd0061" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                     <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                     <circle cx="6" cy="19" r="2" />
-                     <circle cx="17" cy="19" r="2" />
-                     <path d="M17 17h-11v-14h-2" />
-                     <path d="M6 5l14 1l-1 7h-13" />
-                 </svg>
-             </p>
-       </div>
-    </div>
+            <div class="cuenta">
+                <a href="#">Mi cuenta</a>
+        
+                <ul>
+                    <li class="submenu">
+                        <img src="img/cart.png" id="img-carrito">
+                        <div id="carrito">
+                            <table id="lista-carrito" class="u-full-width">
+                                <thead>
+                                    <tr>
+                                        <th>Imagen</th>
+                                        <th>Nombre</th>
+                                        <th>Precio</th>
+                                        <th>Cantidad</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                            
+                            <a href="#" id="vaciar-carrito" class="button u-full-width">Vaciar Carrito</a>
+                            <a href="#" id="comprar" class="button u-full-width">Comprar</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div> <!-- tienda -->
 
      <div class="navegacion-contenido">
         
@@ -61,9 +75,9 @@
                          <nav>
                              <a href="">Perfil</a>
                              <a href="">Mis compras</a>
-                             <a href="">Sistema</a>
+                             <a href="">Inicio</a>
                              <a href="">Configuracion</a>
-                             <a href="">Otra cosa</a>
+                             <a href="stock.html">Pedido fuera de Stock</a>
                              <a href="">Cerrar sesión</a>
                          </nav>
                          <label for="btn-menu" class="cerrar">
@@ -84,7 +98,7 @@
                  <a href="Contactanos.html">Contactanos</a>
              </nav>
         </div>
-     </div>
+     </div> <!--navegacion-->
     </header>
 
     <!-- Inicio radio buttons -->
@@ -96,14 +110,13 @@
                 <input type="radio" name="radio-btn" id="radio4">
         
                 <div class="slide first">
-                    <h2 class="texto-slide">Hola</h2>
-                    <img src="https://i.pinimg.com/originals/af/03/35/af0335ecde89a243dc1681be0559f7cc.jpg" alt=""> 
+                    <img src="img/1.png" alt=""> 
                     
                 </div>
         
                 <div class="slide">
-                    <h2 class="texto-slide">Hola</h2>
-                    <img src="https://wallpapercave.com/wp/wp6437893.jpg" alt=""> 
+                    <h2 class="texto-slide"></h2>
+                    <img src="img/2.png" alt=""> 
                 </div>
         
                 <div class="slide">
@@ -164,40 +177,44 @@
             </div>
         </section>
 
-        <section class="cards contenedor">
-            <h2> ¡No te lo pierdas!</h2>
-      
-       <div class="contenedor-cards contenedor">
-            <div class="card">
-                <img src="https://http2.mlstatic.com/sudaderas-yazbek-unisex-gorro-y-cangurera-para-jovenes-D_NQ_NP_651520-MLM31237047395_062019-F.jpg">
-            <h4>Sudadera M6</h4>
-            <p class="descuento">$249</p>
-            <p class="precio">$149</p>
-            </div>
-
-            <div class="card">
-                <img src="https://http2.mlstatic.com/sudaderas-yazbek-unisex-capucha-y-cangurera-estampar-bordar-D_NQ_NP_664131-MLM31982877669_082019-F.jpg">
-            <h4>Sudadera M6</h4>
-            <p class="descuento">$249</p>
-            <p class="precio">$149</p>
-            </div>
-
-            <div class="card">
-                <img src="https://th.bing.com/th/id/R8ec573951506246862023cf0599cb12d?rik=aVMvVlME7K99ug&pid=ImgRaw">
-            <h4>Sudadera M6</h4>
-            <p class="descuento">$249</p>
-            <p class="precio">$149</p>
-            </div>
-
-            <div class="card">
-                <img src="https://zlash.tk/wp-content/uploads/2021/01/hoo-removebg.png">
-            <h4>Sudadera M6</h4>
-            <p class="descuento">$249</p>
-            <p class="precio">$149</p>
-            </div>
+    <section class="cards contenedor">
+        <h2> Rebajas</h2>
+  
+   <div class="contenedor-cards contenedor"id="lista-producto">
+        <div class="card">
+            <img src="https://http2.mlstatic.com/sudaderas-yazbek-unisex-gorro-y-cangurera-para-jovenes-D_NQ_NP_651520-MLM31237047395_062019-F.jpg">
+        <h4>Sudadera Gris</h4>
+        <p class="descuento">$249</p>
+        <p class="precio">$250</p>
+        <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="1">Agregar Al Carrito</a>
         </div>
-        
-    </section>
+
+        <div class="card">
+            <img src="https://http2.mlstatic.com/sudaderas-yazbek-unisex-capucha-y-cangurera-estampar-bordar-D_NQ_NP_664131-MLM31982877669_082019-F.jpg">
+        <h4>Sudadera Vino</h4>
+        <p class="descuento">$249</p>
+        <p class="precio">$210</p>
+        <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="2">Agregar Al Carrito</a>
+        </div>
+
+        <div class="card">
+            <img src="https://th.bing.com/th/id/R8ec573951506246862023cf0599cb12d?rik=aVMvVlME7K99ug&pid=ImgRaw">
+        <h4>Sudadera M&Ms</h4>
+        <p class="descuento">$249</p>
+        <p class="precio">$230</p>
+        <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="3">Agregar Al Carrito</a>
+        </div>
+
+        <div class="card">
+            <img src="https://zlash.tk/wp-content/uploads/2021/01/hoo-removebg.png">
+        <h4>Sudadera Negra</h4>
+        <p class="descuento">$249</p>
+        <p class="precio">$100</p>
+        <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="4">Agregar Al Carrito</a>
+        </div>
+    </div>
+    
+</section>
 
         
         <footer class="footer">
@@ -205,6 +222,6 @@
         </footer>  
 
        
-     <!-- <script src="script.js"></script>  -->
+     <script src="script.js"></script> 
 </body>
 </html>
