@@ -1,6 +1,4 @@
-"En este repositorio llevaremos el control de actividades y le daremos seguimiento al proyecto 
-=D" 
-#<h1>ItzamaraStore</h1>
+<h1>ItzamaraStore</h1>
 
 <h2>
 *Link a la documentación*</h2>
